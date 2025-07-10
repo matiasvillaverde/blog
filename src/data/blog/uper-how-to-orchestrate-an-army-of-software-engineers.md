@@ -1,7 +1,7 @@
 ---
 title: How to Orchestrate an Army of Software Engineers using UPER
 author: Matias Villaverde
-pubDatetime: 2025-01-10T12:00:00Z
+pubDatetime: 2025-07-10T12:00:00Z
 slug: uper-how-to-orchestrate-an-army-of-software-engineers
 featured: true
 draft: false
@@ -31,7 +31,7 @@ Moreover, **best practices in software engineering matter more than ever**.
 
 ## Best Practices
 
-Fortunately, I had the luck early in my career to have as mentor Matthew, he was a **craftsman**. He would follow best practices no matter what. In fact, **TDD** was a religion, **SOLID** would trigger philosophical discussions worthy of the Pantheon as background.
+Fortunately, I had the luck early in my career to have Matthew Liam Healy as my mentor, he was a **craftsman**. He would follow best practices no matter what. In fact, **TDD** was a religion, **SOLID** would trigger philosophical discussions worthy of the Ancient Agora of Athens as background.
 
 Remarkably, he didn't even copy and paste code, he would **write by hand** the same code (yes, we used to type the code ourselves back in the day).
 
@@ -57,10 +57,10 @@ In essence, software engineering best practices based on **[TDD principles](http
 
 First and foremost, some general tips and tricks:
 
-- Don't prompt yourself, instead use **well defined and curated prompts** that are part of your /Commands toolkit. There are links on each steps to my commands. You can explore with your own.
+- Don't prompt yourself, instead use **well defined and curated prompts** that are part of your /Commands toolkit. For example, you can find great commands in this repo: [SuperClaude](https://github.com/NomenAK/SuperClaude).
 - Ideally, always use the **TODO tool** built-in from Claude Code. **Clear steps is clear thinking. Clear thinking is clear prompting**. As a consequence, all your prompts should have a clear instruction to use the TODO; and your prompts should also be organized in a TODO matter.
-- Run Claude Code in `claude --dangerously-skip-permissions` in a **virtual environment** (Docker, UTM, etc). This will save you a lot of time. By this I mean that you make sure that the army of agents follow the rules of this post... but **don't micromanage them**.
-- Install tools like Bat, rg, fd, that are implemented in rust. Claude Code will **work faster**.
+- Run Claude Code in `claude --dangerously-skip-permissions` in a **virtual environment** (Docker, UTM, etc). Then you don't need to approve each step. Make sure that your army of agents follow the rules of this post... but **don't micromanage them**.
+- Install Rust-based alternatives to common Unix tools like bat (instead of cat), rg (instead of grep), and fd (instead of find). These Rust implementations are significantly faster, which means Claude Code will **work faster** too.
 - Teach Claude how to use other CLI that you find useful, like [codefetch](https://github.com/regenrek/codefetch?tab=readme-ov-file).
 
 > ⚠️ **Warning:** Always run Claude Code in a virtual environment when using `--dangerously-skip-permissions` for security reasons.
@@ -115,6 +115,8 @@ Let's get into it. First and foremost, the first thing to understand is that **G
 
 ### 1.2 Use Claude Code to _understand_ the codebase deeply
 
+> Only understand and explore the codebase, don't write any code
+
 1. Subsequently, use Claude Code to **investigate the relevant parts** of the code that will be affected.
     1. Ask to get context from the **git history** or find specific files.
     2. Ask Claude to identify which **files and functions** are involved in the feature.
@@ -127,6 +129,8 @@ Let's get into it. First and foremost, the first thing to understand is that **G
 - **Devin Deep Wiki** to understand large codebases
 
 ### 1.3 Plan how to execute it
+
+> Again, only plan, don't write any code
 
 - With the context established, ask Claude to generate a **step-by-step plan**.
 - Additionally, read Context7 to understand the latest way of doing it.
@@ -152,7 +156,7 @@ Let's get into it. First and foremost, the first thing to understand is that **G
 
 ## Step 2: Plan
 
-> _The goal of this phase is to systematically execute a **great plan with a high quality context**._
+> _The goal of this phase is to systematically create a **plan based on high quality context**._
 
 Why did we spend so much time writing the issue? The main reason is that we need to create the **perfect context**.
 
@@ -173,6 +177,8 @@ Yes, it's slower. However, **it is faster than Vibe Debugging**.
 Now that we understand the issue and how it affects the codebase, we are going to plan how to implement it. Specifically, it is **VERY important to implement it using TDD**. Every change must **run ALL the tests**, and the **linting**. Moreover, we must have the linter in the most strict way. Tell the Agents to think in **design patterns** of the Gang of Four or Unix like design patterns.
 
 ## Step 3: Implementation
+
+> The goal is to execute the plan step-by-step using TDD
 
 ### 3.1 Execute the plan
 
