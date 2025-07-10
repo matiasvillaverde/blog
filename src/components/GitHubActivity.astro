@@ -1,0 +1,54 @@
+---
+export interface Props {
+  username: string;
+}
+
+const { username } = Astro.props;
+const currentYear = new Date().getFullYear();
+---
+
+<div class="github-activity my-8">
+  <h2 class="text-2xl font-semibold mb-4">GitHub Activity</h2>
+  <div class="contribution-graph bg-muted/20 p-4 rounded-lg overflow-x-auto">
+    <img 
+      src={`https://ghchart.rshah.org/b2b9f4/${username}`}
+      alt={`${username}'s GitHub contribution graph`}
+      class="w-full max-w-full"
+      loading="lazy"
+    />
+  </div>
+  <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2 mt-3">
+    <p class="text-sm text-muted">
+      <span class="italic">Showing public contributions only</span>
+    </p>
+    <a 
+      href={`https://github.com/${username}?tab=overview&from=${currentYear}-01-01`} 
+      target="_blank" 
+      rel="noopener noreferrer"
+      class="text-sm hover:text-accent transition-colors inline-flex items-center gap-1"
+    >
+      View all activity on GitHub 
+      <span class="text-accent">→</span>
+    </a>
+  </div>
+</div>
+
+<style>
+  .contribution-graph {
+    scrollbar-width: thin;
+    scrollbar-color: var(--color-muted) transparent;
+  }
+  
+  .contribution-graph::-webkit-scrollbar {
+    height: 6px;
+  }
+  
+  .contribution-graph::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  
+  .contribution-graph::-webkit-scrollbar-thumb {
+    background-color: var(--color-muted);
+    border-radius: 3px;
+  }
+</style>
