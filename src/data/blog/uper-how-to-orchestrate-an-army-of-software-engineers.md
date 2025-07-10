@@ -39,6 +39,8 @@ Furthermore, his **commit history followed a flow**, as if they were a well-writ
 
 In contrast, I was coming from working mostly in single-dev repos. I was force-pushing to main, I never wrote a Unit Test and files with 5000+ lines with half of them commented out, it was the norm.
 
+![Me, force-pushing to main before I met my mentor](/this-is-fine-force-push.png)
+
 This new way of working was so incredibly annoying!
 
 Why am I telling you about Matthew? Because his annoying strictness taught me something crucial: **discipline creates quality**. Today, I am so glad I had him as a mentor in my early days.
@@ -90,6 +92,8 @@ Additionally, spend time writing **clear [CLAUDE.md](https://docs.anthropic.com/
 5. We follow a structured workflow: **GitHub Issue → Pull Request → Review**. Every single change goes through this process - **no exceptions**.
 6. Pull Request must not have more than **500 lines** of adding code. (You can remove as much code as we want, deleting code is removing complexity which is most of the time a good thing) **Why 500?** Because that's the **sweet spot** where AI agents can still hold the full context in their silicon brains and give you quality feedback. Go beyond that, and they start hallucinating, chocking up, or just giving you generic advice. But here's the real kicker: **500 lines is also what YOUR flesh brain can actually review properly**. Sure, these agents can read 1500 pages in seconds, but they're trained on human data - they think like humans, with human-like complexity limits. They inherited our cognitive boundaries along with our knowledge.
 7. We only write **Clean Code**. What is Clean Code? Code that passes the **most aggressive automatic linting rules** you can apply. These rules must be **enforced by automated tools** - no exceptions. Set your linter to maximum strictness: small functions, low complexity, no magic numbers, proper naming conventions, everything. **Run these linting rules before every compile**, both locally and in CI. If the linter complains, the code doesn't ship. Period.
+
+![You shall not pass! - The linter blocking bad code](/you-shall-not-pass.png)
 8. Don't write documentation, instead **write clean code which is the best documentation**. Remember, you can always use an LLM to read the code and explain it to you. Then you can only have to maintain code, instead of duplicating information in English. 
 
 ## The 4 Step Flow
@@ -202,6 +206,8 @@ Enforce your Agents to follow a Test-Driven Development (KISS-TDD) approach:
 > _The goal of this phase is to refine your work through **iterative feedback**, using **multiple personas**_
 
 ### 4.1 Review personas
+
+![The dream team of AI reviewers](/personas-reviewing.png)
 
 We will start a **new instance**, and the first thing is to understand the Issue + Pull Request + codebase. (Yes, I know this takes a lot of time). But fortunately, the good thing is that we are not actually using our brain, but **multiple agents** that can do this process relatively fast.
 
