@@ -3,20 +3,20 @@ layout: ../layouts/AboutLayout.astro
 title: "About"
 ---
 
-Building AI-powered software feels like having superpowers.
+My name is Mati, and I have been addicted to Agentic Engineering since June 2025.
 
-I've shipped products in Swift and recently fell in love with Rust. Former SoundCloud engineer now exploring the intersection of systems programming and AI.
+Here I share what I find useful, hope it helps.
 
-Based in Berlin, where you'll often find me coding on my boat with my dog as co-pilot.
+I worked at SoundCloud and other startups. Now I am working on the media platform for the GenAI era.
+
+I am based in Berlin, and I travel often to San Francisco.
+
+And I love dogs. This is my dog Freja.
 
 ![My dog and co-pilot](/dog.jpg)
-
-## What I Write About
-
-I share things that I find worth documenting - from technical deep dives into AI and systems programming to thoughts on building software that matters. If you find something useful here, that makes me happy.
 
 ## Connect
 
 You can find me on [GitHub](https://github.com/matiasvillaverde) where I share my open source work.
 
-Feel free to reach out if you want to discuss AI, Rust, or life on the water.
+Feel free to reach out if you want to discuss Agentic Engineering, DIY projects, or dogs.
