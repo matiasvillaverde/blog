@@ -98,6 +98,17 @@ In other words: fewer retries, less vibe debugging, better throughput.
 
 Warming up is not only for the beginning of a project. Do it repeatedly, whenever you enter a new sub-problem, dependency, or unfamiliar area. Treat it as a regular quality loop that levels up your agents over time.
 
+# What if your context window is almost full of research
+
+This is a valid concern. Agents are aware of their context window filling up. The closer they are to filling it up, the more they panic. So better to keep the context window at 30-40% full.
+
+Some techniques that help me achieve that sweet spot are:
+
+- In Claude Code use sub-agents to investigate. They will do it faster in parallel and come back with a summary of their findings that compresses the information into fewer tokens.
+- You can do that manually by compacting the context window and saying you want to keep all the research information, just in fewer tokens.
+
+The key is to rewrite the research into fewer tokens, so you keep the information compressed. It is useful to specify that you want to keep links and pointers to the information. That will help agents use the links in case they need more information in the future.
+
 ## Bonus: build DeepWiki for your own codebase
 
 If your repository is private, you can still create a DeepWiki view using Devin MCP integrations.
