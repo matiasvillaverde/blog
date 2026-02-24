@@ -98,7 +98,7 @@ In other words: fewer retries, less vibe debugging, better throughput.
 
 Warming up is not only for the beginning of a project. Do it repeatedly, whenever you enter a new sub-problem, dependency, or unfamiliar area. Treat it as a regular quality loop that levels up your agents over time.
 
-# What if your context window is almost full of research
+# What if your context window is almost full
 
 This is a valid concern. Agents are aware of their context window filling up. The closer they are to filling it up, the more they panic. So better to keep the context window at 30-40% full.
 
