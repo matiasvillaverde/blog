@@ -43,11 +43,12 @@ const recentPosts = sortedPosts.filter(({ data }) => !data.featured);
       </a>
 
       <div class="flex flex-col sm:flex-row items-center sm:items-start gap-6 mt-6">
-        <img 
-          src="/profile.jpg" 
-          alt="Mati Villaverde" 
+        <img
+          src="/profile.jpg"
+          alt="Mati Villaverde"
           width="128"
           height="128"
+          loading="lazy"
           class="w-32 h-32 rounded-full object-cover border-2 border-accent flex-shrink-0"
         />
         <div class="text-center sm:text-left">

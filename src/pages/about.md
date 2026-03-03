@@ -9,7 +9,7 @@ I write about agentic engineering, DIY, and AI. Previously at SoundCloud and a f
 
 This is my dog Freja.
 
-![My dog and co-pilot](/dog.jpg)
+![My dog and co-pilot](/dog.webp)
 
 ## Connect
 
