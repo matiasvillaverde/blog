@@ -4,6 +4,8 @@
   /* ===== Override default Tailwind Typography styles ===== */
   .app-prose {
     @apply prose;
+    max-width: none;
+    color: var(--color-foreground);
 
     h1,
     h2,
@@ -13,22 +15,50 @@
       @apply mb-3 text-foreground;
     }
 
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      font-family: var(--font-sans);
+      letter-spacing: -0.015em;
+    }
+
+    h1 {
+      @apply mt-12 mb-5 text-[2.125rem] leading-tight font-semibold;
+    }
+
+    h2 {
+      @apply mt-14 mb-5 text-[1.75rem] leading-tight font-semibold;
+    }
+
     h3 {
-      @apply italic;
+      @apply mt-10 mb-4 text-[1.375rem] leading-snug font-semibold;
+    }
+
+    h4 {
+      @apply mt-8 mb-3 text-[1.125rem] leading-snug font-semibold;
     }
 
     p,
-    strong,
     ol,
     ul,
     figcaption,
     table,
-    code {
+    blockquote {
+      font-size: 1.0625rem;
+      line-height: 1.78;
+    }
+
+    p,
+    ol,
+    ul,
+    table {
       @apply text-foreground;
     }
 
     a {
-      @apply break-words text-foreground decoration-dashed underline-offset-4 hover:text-accent focus-visible:no-underline;
+      @apply break-words text-accent decoration-border underline underline-offset-4 transition-colors hover:text-foreground focus-visible:no-underline;
     }
 
     ul {
@@ -48,7 +78,7 @@
     }
 
     figcaption {
-      @apply opacity-75;
+      @apply text-sm opacity-75;
     }
 
     table {
@@ -67,7 +97,7 @@
     }
 
     code {
-      @apply rounded bg-muted/75 p-1 break-words text-foreground before:content-none after:content-none;
+      @apply rounded border border-border bg-background px-1.5 py-0.5 break-words text-[0.92em] text-foreground before:content-none after:content-none;
     }
 
     .astro-code code {
@@ -75,7 +105,7 @@
     }
 
     blockquote {
-      @apply border-s-accent/80 break-words opacity-80;
+      @apply border-s-2 border-s-accent/70 break-words ps-4 text-muted;
     }
 
     details {

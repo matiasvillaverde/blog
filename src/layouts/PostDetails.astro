@@ -95,7 +95,7 @@ const nextPost =
   >
     <h1
       transition:name={slugifyStr(title)}
-      class="inline-block text-2xl font-bold text-accent sm:text-3xl"
+      class="display-title inline-block max-w-[18ch] text-[2.75rem] leading-[1.02] font-semibold tracking-[-0.035em] text-foreground sm:text-[3.25rem]"
     >
       {title}
     </h1>
@@ -106,7 +106,7 @@ const nextPost =
     </div>
     <article
       id="article"
-      class="app-prose mx-auto mt-8 max-w-app prose-pre:bg-(--shiki-light-bg) dark:prose-pre:bg-(--shiki-dark-bg)"
+      class="app-prose mt-10 prose-pre:bg-(--shiki-light-bg) dark:prose-pre:bg-(--shiki-dark-bg)"
     >
       <Content />
     </article>
@@ -136,7 +136,7 @@ const nextPost =
             <IconChevronLeft class="inline-block flex-none rtl:rotate-180" />
             <div>
               <span>Previous Post</span>
-              <div class="text-sm text-accent/85">{prevPost.title}</div>
+              <div class="text-sm text-accent">{prevPost.title}</div>
             </div>
           </a>
         )
@@ -149,7 +149,7 @@ const nextPost =
           >
             <div>
               <span>Next Post</span>
-              <div class="text-sm text-accent/85">{nextPost.title}</div>
+              <div class="text-sm text-accent">{nextPost.title}</div>
             </div>
             <IconChevronRight class="inline-block flex-none rtl:rotate-180" />
           </a>
