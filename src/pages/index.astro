@@ -7,9 +7,11 @@ import Socials from "@/components/Socials.astro";
 import LinkButton from "@/components/LinkButton.astro";
 import Card from "@/components/Card.astro";
 import Hr from "@/components/Hr.astro";
+import { Picture } from "astro:assets";
 import getSortedPosts from "@/utils/getSortedPosts";
 import IconRss from "@/assets/icons/IconRss.svg";
 import IconArrowRight from "@/assets/icons/IconArrowRight.svg";
+import profilePortrait from "@/assets/images/profile-portrait.jpeg";
 import { SITE } from "@/config";
 import { SOCIALS } from "@/constants";
 
@@ -43,14 +45,24 @@ const recentPosts = sortedPosts.filter(({ data }) => !data.featured);
       </a>
 
       <div class="flex flex-col sm:flex-row items-center sm:items-start gap-6 mt-6">
-        <img
-          src="/profile.jpg"
-          alt="Mati Villaverde"
-          width="128"
-          height="128"
-          loading="lazy"
-          class="w-32 h-32 rounded-full object-cover border-2 border-accent flex-shrink-0"
-        />
+        <div class="flex-shrink-0">
+          <Picture
+            src={profilePortrait}
+            alt="Mati Villaverde"
+            formats={["avif", "webp"]}
+            fallbackFormat="jpg"
+            width={128}
+            height={128}
+            widths={[128, 256]}
+            sizes="128px"
+            layout="fixed"
+            fit="cover"
+            position="top"
+            quality={95}
+            priority
+            class="w-32 h-32 rounded-full border-2 border-accent"
+          />
+        </div>
         <div class="text-center sm:text-left">
           <h2 class="text-2xl font-semibold mb-3">Hi, I'm Mati.</h2>
           <p>
